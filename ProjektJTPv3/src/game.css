@@ -1,0 +1,39 @@
+@font-face
+{
+    src: url("file:images/kenvector_future.ttf");
+}
+.root{
+    -fx-background-image: url("file:images/background.png");
+    -fx-font-family: "KenVector Future";
+}
+.sub1{
+    -fx-background-image: url("file:images/blue_panel.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 400px 400px;
+    -fx-background-color: transparent;
+}
+#labelPoints{
+        -fx-background-color: transparent;
+        -fx-text-fill: black;
+        -fx-background-image: url("file:images/buttonBlue.png");
+        -fx-background-repeat: no-repeat;
+        -fx-pref-width: 130px;
+        -fx-pref-height: 40px;
+        -fx-background-size: 130px 40px;
+        -fx-padding: 10;
+}
+#labelEnd{
+    -fx-font-size: 20px;
+}
+.button{
+    -fx-font-size:16px;
+    -fx-padding: 10;
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-background-image: url("file:images/blue_button04.png");
+    -fx-pref-height: 49px;
+    -fx-pref-width: 190px;
+}
+.button:hover{
+    -fx-text-fill: #EE82EE;
+}

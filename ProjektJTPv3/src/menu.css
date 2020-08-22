@@ -1,0 +1,71 @@
+@font-face
+{
+    src: url("file:images/kenvector_future.ttf");
+}
+.root{
+    -fx-background-image: url("file:images/menu.png");
+    -fx-font-family: "KenVector Future";
+}
+#sub1{
+    -fx-background-image: url("file:images/blue_panel.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 600px 400px;
+    -fx-background-color: transparent;
+}
+.button{
+    -fx-font-family: "KenVector Future";
+    -fx-font-size:16px;
+    -fx-padding: 10;
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-background-image: url("file:images/blue_button04.png");
+    -fx-pref-height: 49px;
+    -fx-pref-width: 190px;
+}
+.button:pressed{
+    -fx-background-image: url("file:images/blue_button03.png");
+    -fx-pref-height: 45px;
+}
+.button:hover{
+    -fx-text-fill: #EE82EE;
+}
+.label{
+    -fx-font-size: 16px;
+    -fx-padding: 5px;
+}
+#radioB{
+    -fx-content-display: bottom;
+    -fx-background-image: url("file:images/playerShip2_blue.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-pref-width: 112px;
+    -fx-pref-height: 200px;
+}
+#radioG{
+     -fx-content-display: bottom;
+        -fx-background-image: url("file:images/playerShip2_green.png");
+        -fx-background-color: transparent;
+        -fx-background-repeat: no-repeat;
+        -fx-pref-width: 112px;
+        -fx-pref-height: 200px;
+}
+#radioO{
+     -fx-content-display: bottom;
+        -fx-background-image: url("file:images/playerShip2_orange.png");
+        -fx-background-color: transparent;
+        -fx-background-repeat: no-repeat;
+        -fx-pref-width: 112px;
+        -fx-pref-height: 200px;
+}
+#radioR{
+     -fx-content-display: bottom;
+        -fx-background-image: url("file:images/playerShip2_red.png");
+        -fx-background-color: transparent;
+        -fx-background-repeat: no-repeat;
+        -fx-pref-width: 112px;
+        -fx-pref-height: 200px;
+}
+#logo{
+    -fx-image: url("file:images/spaceinv.png");
+}
+

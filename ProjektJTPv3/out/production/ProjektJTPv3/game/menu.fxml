@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.collections.FXCollections?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="game.MenuController"
+            prefHeight="400.0" prefWidth="600.0"
+            stylesheets="@../menu.css">
+
+    <ImageView  id="logo" fitHeight="200" fitWidth="462" layoutY="25" layoutX="25"/>
+    <Button fx:id="startButton" text="START" onMousePressed="#onPress" onMouseReleased="#onRelease"  onAction="#onStartButtonClick" layoutX="100" layoutY="300"/>
+    <Button fx:id="optionsButton" text="OPTIONS" onMousePressed="#onPress" onMouseReleased="#onRelease" onAction="#onOptionsButtonClick" layoutX="100" layoutY="350"  />
+    <Button fx:id="scoreButton" text="SCORE" onMousePressed="#onPress" onMouseReleased="#onRelease"  onAction="#onScoreButtonClick" layoutY="400"  layoutX="100"/>
+    <Button fx:id="instrucitonsButton" text="INSTRUCTIONS" onMousePressed="#onPress" onMouseReleased="#onRelease" onAction="#onInstructionsButtonClick"  layoutY="450"  layoutX="100"/>
+    <Button fx:id="exitButton" text="EXIT" onMousePressed="#onPress" onMouseReleased="#onRelease" onAction="#onExitButtonClick" layoutY="500"  layoutX="100"/>
+
+
+    <SubScene fx:id="subScOptions" layoutX="2500" layoutY="250" height="400" width="600">
+        <root>
+            <AnchorPane id="sub1" stylesheets="@../menu.css">
+                <Label textFill="midnightblue" text="CHOOSE YOUR SHIP" layoutX="200" layoutY="50"/>
+                <fx:define>
+                    <ToggleGroup fx:id="shipToggleGroup"/>
+                </fx:define>
+                <RadioButton fx:id="blueRadio" id="radioB" text="Blue" textFill="blue" layoutX="30" layoutY="100" toggleGroup="$shipToggleGroup"/>
+                <RadioButton fx:id="greenRadio" id="radioG" text="Green" textFill="green" layoutX="170" layoutY="100" toggleGroup="$shipToggleGroup"/>
+                <RadioButton fx:id="orangeRadio" id="radioO" text="Orange" textFill="orange" layoutX="310" layoutY="100" toggleGroup="$shipToggleGroup"/>
+                <RadioButton fx:id="redRadio" id="radioR" text="Red" textFill="red" layoutX="450" layoutY="100" toggleGroup="$shipToggleGroup"/>
+            </AnchorPane>
+        </root>
+    </SubScene>
+
+    <SubScene fx:id="subScInstructions" layoutX="2500" layoutY="250" height="400" width="600">
+        <root>
+            <AnchorPane id="sub1" stylesheets="@../menu.css">
+                <Label layoutY="50" layoutX="50" wrapText="true" prefWidth="500"
+                       text="Welcome to Space Intruders!"/>
+                <Label  layoutY="90" layoutX="50" text="THINGS TO KNOW:" />
+                <Label  layoutY="130" layoutX="50" text="-> Use left/right arrow keys to move"/>
+                <Label  layoutY="170" layoutX="50" text="-> Press spacebar to shoot"/>
+                <Label  layoutY="210" layoutX="50" text="-> The enemies get faster every level"/>
+                <Label  layoutY="250" layoutX="50" text="-> Hit enemy 3 times to kill him"     />
+                <Label  layoutY="290" layoutX="50" text="-> Catch star for extra points"     />
+                <Label  layoutY="330" layoutX="50" text="-> Boss appears every 3 level"     />
+            </AnchorPane>
+        </root>
+    </SubScene>
+    <SubScene fx:id="subScScore" layoutX="2500" layoutY="250" height="400" width="600">
+        <root>
+            <AnchorPane id="sub1" stylesheets="@../menu.css">
+                <Label layoutY="50" layoutX="50" wrapText="true" prefWidth="500"
+                       text="Choose player to see scores"/>
+                <ComboBox fx:id="playerList" layoutY="80" layoutX="50">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+
+                <ListView fx:id="scoresList" layoutY="100" layoutX="50" prefHeight="250"/>
+            </AnchorPane>
+        </root>
+    </SubScene>
+</AnchorPane>
