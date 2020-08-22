@@ -1,3 +1,3 @@
 # JavaFX-spaceinvaders
-First JavaFX project using fxml files 
+First JavaFX project using fxml menu file 
 school project
